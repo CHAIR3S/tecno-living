@@ -158,11 +158,11 @@ export function HeroSection() {
             <p className="text-muted-foreground">Habitaciones</p>
           </div>
           <div className="text-center" ref={estudiantesRef}>
-            <p className="text-4xl font-bold text-primary mb-2">{estudiantesSalvados}</p>
+            <p className="text-4xl font-bold text-primary mb-2">200+</p>
             <p className="text-muted-foreground">Estudiantes Foraneos Ayudados</p>
           </div>
           <div className="text-center" ref={transaccionesRef}>
-            <p className="text-4xl font-bold text-primary mb-2">{transaccionesSeguras.toLocaleString()}</p>
+            <p className="text-4xl font-bold text-primary mb-2">500+</p>
             <p className="text-muted-foreground">Transacciones Seguras</p>
           </div>
           <div className="text-center">

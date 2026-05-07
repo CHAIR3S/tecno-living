@@ -116,14 +116,14 @@ export function SecuritySection() {
             <p className="text-3xl font-bold text-primary mb-1">500+</p>
             <p className="text-sm text-muted-foreground">Habitaciones Disponibles</p>
           </div>
-          <div className="text-center" ref={estudiantesRef}>
+          {/* <div className="text-center" ref={estudiantesRef}>
             <p className="text-3xl font-bold text-primary mb-1">{estudiantesAyudados}</p>
             <p className="text-sm text-muted-foreground">Estudiantes Foraneos Ayudados</p>
           </div>
           <div className="text-center" ref={transaccionesRef}>
             <p className="text-3xl font-bold text-primary mb-1">{transaccionesSeguras.toLocaleString()}</p>
             <p className="text-sm text-muted-foreground">Transacciones Seguras</p>
-          </div>
+          </div> */}
           <div className="text-center">
             <p className="text-3xl font-bold text-primary mb-1">4.9/5</p>
             <p className="text-sm text-muted-foreground">Rating Promedio</p>

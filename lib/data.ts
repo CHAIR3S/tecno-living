@@ -105,7 +105,7 @@ export const ROOMS: Room[] = [
     id: '4',
     title: 'Habitación con vista al campus',
     location: 'Avenida Universitaria, 300m del campus',
-    price: 32,
+    price: 332,
     image: 'https://images.unsplash.com/photo-1516455207990-7a41e1d4ffd5?w=500&h=400&fit=crop',
     images: [
       'https://images.unsplash.com/photo-1516455207990-7a41e1d4ffd5?w=800&h=600&fit=crop',
@@ -137,7 +137,7 @@ export const ROOMS: Room[] = [
     id: '5',
     title: 'Cuarto acogedor para dos personas',
     location: 'Barrio Sur, 1km del campus',
-    price: 22,
+    price: 220,
     image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&h=400&fit=crop',
     images: [
       'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop',
@@ -169,7 +169,7 @@ export const ROOMS: Room[] = [
     id: '6',
     title: 'Apartamento full con terraza',
     location: 'Zona Ejecutiva, 900m del campus',
-    price: 38,
+    price: 380,
     image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=400&fit=crop',
     images: [
       'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop',
@@ -202,7 +202,7 @@ export const ROOMS: Room[] = [
     id: '7',
     title: 'Habitación en casa de familia',
     location: 'Barrio Residencial, 1.2km del campus',
-    price: 20,
+    price: 200,
     image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500&h=400&fit=crop',
     images: [
       'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop',

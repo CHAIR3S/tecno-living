@@ -39,10 +39,10 @@ export function Navbar() {
               <HelpCircle size={20} className="text-foreground" />
             </button>
             <Link href="/registro">
-              <Button className="bg-primary text-primary-foreground hover:bg-apple-blue-dark h-9 px-4 sm:px-5 rounded-full text-sm font-medium">
+              {/* <Button className="bg-primary text-primary-foreground hover:bg-apple-blue-dark h-9 px-4 sm:px-5 rounded-full text-sm font-medium">
                 <UserPlus size={16} className="mr-2" />
                 <span>Registrarse</span>
-              </Button>
+              </Button> */}
             </Link>
           </div>
         </div>
