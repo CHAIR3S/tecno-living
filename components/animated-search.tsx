@@ -46,17 +46,12 @@ export function AnimatedSearch() {
       <div className="flex gap-3 bg-card rounded-full shadow-lg p-1.5 border border-border">
         <div className="flex-1 flex items-center gap-3 px-6">
           <Search className="text-muted-foreground" size={20} />
-          <input
-            type="text"
-            value={displayText}
-            readOnly
-            placeholder="Ubicación, precio..."
-            className="w-full bg-transparent outline-none text-foreground placeholder:text-muted-foreground py-3 text-lg cursor-default"
-            style={{
-              caretColor: 'transparent',
-            }}
-          />
-          <span className="text-foreground opacity-70 animate-pulse">|</span>
+          <div className="flex-1 h-12 flex items-center">
+            <span className="bg-transparent outline-none text-foreground text-lg cursor-default">
+              {displayText}
+            </span>
+            <span className="text-foreground opacity-70 animate-pulse">|</span>
+          </div>
         </div>
         <Button
           type="submit"

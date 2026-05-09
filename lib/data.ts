@@ -34,6 +34,7 @@ export const ROOMS: Room[] = [
     },
     studentsOnly: true,
     distance: 450,
+    instanceType: 'long',
   },
   {
     id: '2',
@@ -67,15 +68,16 @@ export const ROOMS: Room[] = [
     },
     studentsOnly: true,
     distance: 650,
+    instanceType: 'short',
   },
   {
     id: '3',
     title: 'Estudio lujoso completamente amueblado',
     location: 'Zona Premium, 800m del campus',
     price: 750,
-    image: 'https://images.unsplash.com/photo-1512895852202-6f4ee016583e?w=500&h=400&fit=crop',
+    image: 'https://img10.naventcdn.com/avisos/resize/18/01/46/12/64/52/1200x1200/1524160739.jpg?isFirstImage=true',
     images: [
-      'https://images.unsplash.com/photo-1512895852202-6f4ee016583e?w=800&h=600&fit=crop',
+      'https://img10.naventcdn.com/avisos/resize/18/01/46/12/64/52/1200x1200/1524160739.jpg?isFirstImage=true',
       'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop',
     ],
     type: 'private',
@@ -100,15 +102,18 @@ export const ROOMS: Room[] = [
     },
     studentsOnly: false,
     distance: 800,
+    instanceType: 'long',
   },
   {
     id: '4',
     title: 'Habitación con vista al campus',
     location: 'Avenida Universitaria, 300m del campus',
     price: 332,
-    image: 'https://images.unsplash.com/photo-1516455207990-7a41e1d4ffd5?w=500&h=400&fit=crop',
+    image: 'https://image-tc.galaxy.tf/wijpeg-an0tqikglihrrq19xennie74c/1800x1200_standard.jpg?crop=100%2C0%2C1600%2C1200&width=1400',
     images: [
-      'https://images.unsplash.com/photo-1516455207990-7a41e1d4ffd5?w=800&h=600&fit=crop',
+      'https://image-tc.galaxy.tf/wijpeg-an0tqikglihrrq19xennie74c/1800x1200_standard.jpg?crop=100%2C0%2C1600%2C1200&width=1400',
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop',
+      'https://i0.wp.com/celaya.tecnm.mx/wp-content/uploads/2024/06/WhatsApp-Image-2024-05-27-at-1.08.02-PM-scaled.jpeg?resize=2048%2C1536&ssl=1',
     ],
     type: 'private',
     amenities: ['Baño privado', 'WiFi', 'Cocina', 'Terraza'],
@@ -132,6 +137,7 @@ export const ROOMS: Room[] = [
     },
     studentsOnly: true,
     distance: 300,
+    instanceType: 'short',
   },
   {
     id: '5',
@@ -141,6 +147,8 @@ export const ROOMS: Room[] = [
     image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&h=400&fit=crop',
     images: [
       'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop',
     ],
     type: 'shared',
     amenities: ['Baño compartido', 'WiFi', 'Cocina compartida'],
@@ -164,6 +172,7 @@ export const ROOMS: Room[] = [
     },
     studentsOnly: true,
     distance: 1000,
+    instanceType: 'short',
   },
   {
     id: '6',
@@ -197,6 +206,7 @@ export const ROOMS: Room[] = [
     },
     studentsOnly: false,
     distance: 900,
+    instanceType: 'long',
   },
   {
     id: '7',
@@ -206,6 +216,8 @@ export const ROOMS: Room[] = [
     image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500&h=400&fit=crop',
     images: [
       'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?w=800&h=600&fit=crop',
     ],
     type: 'shared',
     amenities: ['Baño compartido', 'Cocina familiar', 'WiFi', 'Comida incluida'],
@@ -229,15 +241,18 @@ export const ROOMS: Room[] = [
     },
     studentsOnly: true,
     distance: 1200,
+    instanceType: 'long',
   },
   {
     id: '8',
     title: 'Monoambiente moderno y luminoso',
     location: 'Centro Nuevo, 700m del campus',
-    price: 35,
-    image: 'https://images.unsplash.com/photo-1512895852202-6f4ee016583e?w=500&h=400&fit=crop',
+    price: 350,
+    image: 'https://homesolution.net/blog/wp-content/uploads/2021/02/monoambiente-moderno-3.jpg',
     images: [
-      'https://images.unsplash.com/photo-1512895852202-6f4ee016583e?w=800&h=600&fit=crop',
+      'https://homesolution.net/blog/wp-content/uploads/2021/02/monoambiente-moderno-3.jpg',
+      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop',
+      'https://homesolution.net/blog/wp-content/uploads/2021/02/monoambiente-moderno-2.jpg',
     ],
     type: 'private',
     amenities: ['Baño privado', 'WiFi', 'Cocina completa', 'Luz natural'],
@@ -261,6 +276,7 @@ export const ROOMS: Room[] = [
     },
     studentsOnly: true,
     distance: 700,
+    instanceType: 'short',
   },
 ];
 

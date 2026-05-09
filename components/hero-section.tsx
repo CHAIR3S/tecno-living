@@ -107,7 +107,7 @@ export function HeroSection() {
           <div className="flex gap-3 bg-card rounded-full shadow-lg p-1.5 border border-border">
             <div className="flex-1 flex items-center gap-3 px-6">
               <Search className="text-muted-foreground" size={20} />
-              <div className="w-full py-3 text-lg text-foreground flex items-center">
+              <div className="flex-1 h-12 flex items-center text-lg text-foreground">
                 <span>{typewriterText}</span>
                 <span className="ml-0.5 w-0.5 h-6 bg-primary animate-pulse"></span>
               </div>
@@ -151,23 +151,69 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Stats with Animated Counters */}
-        <div className="grid md:grid-cols-4 gap-8 mt-28 pt-28 border-t border-border">
-          <div className="text-center">
-            <p className="text-4xl font-bold text-primary mb-2">500+</p>
-            <p className="text-muted-foreground">Habitaciones</p>
-          </div>
-          <div className="text-center" ref={estudiantesRef}>
-            <p className="text-4xl font-bold text-primary mb-2">200+</p>
-            <p className="text-muted-foreground">Estudiantes Foraneos Ayudados</p>
-          </div>
-          <div className="text-center" ref={transaccionesRef}>
-            <p className="text-4xl font-bold text-primary mb-2">500+</p>
-            <p className="text-muted-foreground">Transacciones Seguras</p>
-          </div>
-          <div className="text-center">
-            <p className="text-4xl font-bold text-primary mb-2">24/7</p>
-            <p className="text-muted-foreground">Soporte</p>
+        {/* Stats with Animated Counters and Wave Background */}
+        <div className="relative mt-28 pt-28 border-t border-border overflow-hidden">
+          {/* Wave SVG Background */}
+          <svg 
+            className="absolute inset-0 w-full h-full opacity-20"
+            viewBox="0 0 1200 400"
+            preserveAspectRatio="xMidYMid slice"
+            style={{ zIndex: 0 }}
+          >
+            <defs>
+              <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#3b82f6" />
+                <stop offset="100%" stopColor="#1e40af" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M0,100 Q300,50 600,100 T1200,100 L1200,400 L0,400 Z"
+              fill="url(#waveGradient)"
+              opacity="0.3"
+            />
+            <path
+              d="M0,150 Q300,100 600,150 T1200,150 L1200,400 L0,400 Z"
+              fill="url(#waveGradient)"
+              opacity="0.2"
+              style={{
+                animation: 'wave 8s linear infinite',
+              }}
+            />
+            <path
+              d="M0,200 Q300,150 600,200 T1200,200 L1200,400 L0,400 Z"
+              fill="url(#waveGradient)"
+              opacity="0.1"
+              style={{
+                animation: 'wave 12s linear infinite reverse',
+              }}
+            />
+          </svg>
+
+          <style>{`
+            @keyframes wave {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(1200px); }
+            }
+          `}</style>
+
+          {/* Stats Grid - relative positioning for z-index */}
+          <div className="grid md:grid-cols-4 gap-8 relative z-10">
+            <div className="text-center">
+              <p className="text-4xl font-bold text-primary mb-2">500+</p>
+              <p className="text-muted-foreground">Habitaciones</p>
+            </div>
+            <div className="text-center" ref={estudiantesRef}>
+              <p className="text-4xl font-bold text-primary mb-2">{estudiantesSalvados}+</p>
+              <p className="text-muted-foreground">Estudiantes Foraneos Ayudados</p>
+            </div>
+            <div className="text-center" ref={transaccionesRef}>
+              <p className="text-4xl font-bold text-primary mb-2">{transaccionesSeguras}+</p>
+              <p className="text-muted-foreground">Transacciones Seguras</p>
+            </div>
+            <div className="text-center">
+              <p className="text-4xl font-bold text-primary mb-2">24/7</p>
+              <p className="text-muted-foreground">Soporte</p>
+            </div>
           </div>
         </div>
       </div>

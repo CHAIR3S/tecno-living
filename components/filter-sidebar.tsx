@@ -43,6 +43,7 @@ export function FilterSidebar({ filters, onFiltersChange }: FilterSidebarProps) 
       furnished: false,
       studentsOnly: false,
       verified: false,
+      instanceType: 'all',
     });
   };
 
@@ -89,6 +90,31 @@ export function FilterSidebar({ filters, onFiltersChange }: FilterSidebarProps) 
             <RadioGroupItem value="shared" id="type-shared" />
             <Label htmlFor="type-shared" className="font-normal cursor-pointer">
               Compartida
+            </Label>
+          </div>
+        </RadioGroup>
+      </div>
+
+      {/* Instance Type */}
+      <div className="mb-8">
+        <Label className="font-semibold text-foreground block mb-3">Tipo de Instancia</Label>
+        <RadioGroup value={filters.instanceType || 'all'} onValueChange={(value) => onFiltersChange({ ...filters, instanceType: value as 'all' | 'short' | 'long' })}>
+          <div className="flex items-center gap-2 mb-2">
+            <RadioGroupItem value="all" id="instance-all" />
+            <Label htmlFor="instance-all" className="font-normal cursor-pointer">
+              Todas
+            </Label>
+          </div>
+          <div className="flex items-center gap-2 mb-2">
+            <RadioGroupItem value="short" id="instance-short" />
+            <Label htmlFor="instance-short" className="font-normal cursor-pointer">
+              Corta Instancia (hasta 1 mes)
+            </Label>
+          </div>
+          <div className="flex items-center gap-2">
+            <RadioGroupItem value="long" id="instance-long" />
+            <Label htmlFor="instance-long" className="font-normal cursor-pointer">
+              Larga Instancia (más de 1 mes)
             </Label>
           </div>
         </RadioGroup>

@@ -27,6 +27,7 @@ export interface Room {
   };
   studentsOnly: boolean;
   distance: number; // meters from campus
+  instanceType?: 'short' | 'long'; // Optional for backwards compatibility
 }
 
 export interface FAQItem {
@@ -42,6 +43,7 @@ export interface FilterState {
   furnished: boolean;
   studentsOnly: boolean;
   verified: boolean;
+  instanceType: 'all' | 'short' | 'long';
 }
 
 export interface User {

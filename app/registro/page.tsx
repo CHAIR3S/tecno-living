@@ -98,10 +98,25 @@ export default function RegistroPage() {
 
     // Simulate API call
     setTimeout(() => {
+      // Create new user
+      const users = JSON.parse(localStorage.getItem('users') || '[]');
+      const newUser = {
+        id: `user-${Date.now()}`,
+        name: formData.name,
+        email: formData.email,
+        password: formData.password, // In a real app, this would be hashed
+        avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${formData.name}`,
+        verified: false,
+        credentialImage: fileName || '',
+      };
+
+      users.push(newUser);
+      localStorage.setItem('users', JSON.stringify(users));
+
       setIsLoading(false);
       setIsSuccess(true);
 
-      // Reset form after 2 seconds
+      // Reset form after 2 seconds and redirect
       setTimeout(() => {
         setFormData({
           name: '',
@@ -112,7 +127,8 @@ export default function RegistroPage() {
         });
         setFileName(null);
         setIsSuccess(false);
-      }, 3000);
+        window.location.href = '/login';
+      }, 2000);
     }, 2000);
   };
 
@@ -123,7 +139,7 @@ export default function RegistroPage() {
       <Navbar />
 
       {/* Header */}
-      <section className="bg-gradient-to-r from-primary/10 to-accent/10 border-b border-border py-12 px-4 sm:px-6 lg:px-8">
+      <section className="bg-linear-to-r from-primary/10 to-accent/10 border-b border-border py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
             Únete a Tecno Living
@@ -332,7 +348,7 @@ export default function RegistroPage() {
                 {/* Login Link */}
                 <p className="text-center text-muted-foreground">
                   ¿Ya tienes cuenta?{' '}
-                  <a href="#" className="text-primary hover:underline font-semibold">
+                  <a href="/login" className="text-primary hover:underline font-semibold">
                     Inicia sesión
                   </a>
                 </p>

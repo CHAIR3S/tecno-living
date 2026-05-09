@@ -111,7 +111,7 @@ export function SecuritySection() {
         </div>
 
         {/* Trust Badges with Animated Counters */}
-        <div className="mt-20 grid md:grid-cols-4 gap-6 bg-muted/50 rounded-xl p-10 border border-border">
+        <div className="mt-20 grid md:grid-cols-2 gap-6 bg-muted/50 rounded-xl p-10 border border-border">
           <div className="text-center">
             <p className="text-3xl font-bold text-primary mb-1">500+</p>
             <p className="text-sm text-muted-foreground">Habitaciones Disponibles</p>

@@ -21,6 +21,7 @@ export default function HabitacionesPage() {
     furnished: false,
     studentsOnly: false,
     verified: false,
+    instanceType: 'all',
   });
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -59,6 +60,11 @@ export default function HabitacionesPage() {
         return false;
       }
 
+      // Instance type filter
+      if (filters.instanceType !== 'all' && room.instanceType !== filters.instanceType) {
+        return false;
+      }
+
       return true;
     });
   }, [filters]);
@@ -70,14 +76,9 @@ export default function HabitacionesPage() {
     currentPage * ROOMS_PER_PAGE
   );
 
-  // Handle filter changes with loading animation
   const handleFiltersChange = (newFilters: FilterState) => {
-    setIsLoading(true);
     setFilters(newFilters);
     setCurrentPage(1);
-    
-    // Simulate loading (remove this in real app)
-    setTimeout(() => setIsLoading(false), 500);
   };
 
   // Handle pagination with loading
@@ -97,7 +98,7 @@ export default function HabitacionesPage() {
       <Navbar />
 
       {/* Header */}
-      <section className="bg-gradient-to-r from-primary/10 to-accent/10 border-b border-border py-12 px-4 sm:px-6 lg:px-8">
+      <section className="bg-linear-to-r from-primary/10 to-accent/10 border-b border-border py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-2">
             Habitaciones Disponibles
